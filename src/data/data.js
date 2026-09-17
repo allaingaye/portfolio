@@ -1,12 +1,12 @@
 export const personalInfo = {
-  name: "Allingaye Lucien",
+  name: "Allaingaye Lucien",
   title: "Software Engineer & Full-Stack Developer",
   tagline: "Building innovative digital solutions through code, engineering principles, and creative problem-solving.",
   location: "Kigali, Rwanda",
   email: "lucienallingaye@gmail.com",
   phone: "+250 791 349 542",
   github: "https://github.com/allaingaye",
-  linkedin: "https://linkedin.com/in/allaingaye",
+  linkedin: "https://linkedin.com/in/lucien-allaingaye",
   yearsExperience: "1+",
   projectsCompleted: "7+",
   happyClients: "5+",
@@ -52,6 +52,7 @@ export const skills = {
     skills: [
       { name: "Python", percentage: 88, icon: "Python" },
       { name: "FastAPI", percentage: 85, icon: "Server" },
+      { name: "Django", percentage: 85, icon: "Server" },
       { name: "Java", percentage: 85, icon: "Coffee" },
       { name: "Spring Boot", percentage: 80, icon: "Leaf" },
       { name: "PHP", percentage: 80, icon: "Code2" },          // ✅ Added PHP
@@ -168,6 +169,6 @@ export const testimonials = [
 
 export const socialLinks = [
   { name: "GitHub", url: "https://github.com/allaingaye", icon: "Github" },
-  { name: "LinkedIn", url: "https://linkedin.com/in/allaingaye", icon: "Linkedin" },
+  { name: "LinkedIn", url: "https://linkedin.com/in/lucien-allaingaye", icon: "Linkedin" },
   { name: "Email", url: "mailto:lucienallingaye@gmail.com", icon: "Mail" },
 ];

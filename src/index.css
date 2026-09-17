@@ -46,3 +46,19 @@
     @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
   }
 }
+/* Make the globe canvas transparent */
+.globe-wrapper canvas {
+  background: transparent !important;
+  background-color: transparent !important;
+  outline: none !important;
+  cursor: grab;
+}
+
+.globe-wrapper canvas:active {
+  cursor: grabbing;
+}
+
+.globe-wrapper > div {
+  background: transparent !important;
+  background-color: transparent !important;
+}
