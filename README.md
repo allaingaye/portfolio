@@ -6,7 +6,7 @@
 
 **A modern, responsive portfolio showcasing my projects, skills, and experience.**
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-2563eb?style=for-the-badge)](https://portfolio-dg3fqyw7h-allaingaye.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-2563eb?style=for-the-badge)](https://portfolio-dg3fqyw7h-allaingaye.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/allaingaye)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/allaingaye)
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lucienallingaye@gmail.com)
@@ -272,7 +272,7 @@ Contributions, issues, and feature requests are welcome!
 This project is **MIT Licensed** — see the [LICENSE](LICENSE) file for details.
 
 ```
-MIT License
+ License
 
 Copyright (c) 2025 Allingaye Lucien
 
@@ -301,6 +301,6 @@ SOFTWARE.
 
 ### ⭐ If you like this project, please give it a star!
 
-**Built with ❤️ in Rwanda 🇷🇼**
+**Built with ❤️ **
 
 </div>
