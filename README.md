@@ -212,9 +212,9 @@ Every push to `main` will trigger an automatic deployment.
 
 ## 📸 Screenshots
 
-> 📸 Screenshots coming soon! Visit the [live demo](https://portfolio-dg3fqyw7h-allaingaye.vercel.app/) to see it in action.
+> 📸 Screenshots coming soon! Visit the [live demo](https://portfolio-allaingaye.vercel.app/) to see it in action.
 
-<!-- 
+ 
 When you have screenshots ready, uncomment and add them to /public:
 
 ### 🏠 Home Page (Light Mode)
@@ -228,7 +228,7 @@ When you have screenshots ready, uncomment and add them to /public:
 
 ### 💼 Portfolio Section
 ![Portfolio](./public/portfolio.png)
--->
+
 
 ---
 
