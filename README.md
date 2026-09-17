@@ -21,13 +21,6 @@
 
 ---
 
-## 📸 Preview
-
-![Portfolio Preview](./public/preview.png)
-<!-- Replace with your actual screenshot -->
-
----
-
 ## ✨ Features
 
 - 🎨 **Modern UI/UX** — Clean, professional design with smooth animations
@@ -46,59 +39,63 @@
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
 ### Libraries & Tools
+
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![React Icons](https://img.shields.io/badge/React_Icons-E91E63?style=for-the-badge&logo=react&logoColor=white)
 ![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
-![React Globe](https://img.shields.io/badge/React_Globe-4B9CD3?style=for-the-badge&logo=globe&logoColor=white)
 
 ### Services
+
 ![EmailJS](https://img.shields.io/badge/EmailJS-FF6B6B?style=for-the-badge&logo=mail.ru&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ---
 
 ## 📂 Project Structure
+
+```
 portfolio/
 ├── public/
-│ ├── profile.jpeg # Profile photo
-│ ├── cv.pdf # Downloadable CV
-│ └── favicon.ico
+│   ├── profile.jpeg          # Profile photo
+│   ├── cv.pdf                # Downloadable CV
+│   └── favicon.ico
 │
 ├── src/
-│ ├── components/
-│ │ ├── Navbar.jsx # Navigation with theme toggle
-│ │ ├── Hero.jsx # Hero section with globe
-│ │ ├── About.jsx # About section
-│ │ ├── Services.jsx # Services offered
-│ │ ├── Skills.jsx # Skills with progress bars
-│ │ ├── Portfolio.jsx # Projects showcase
-│ │ ├── Testimonials.jsx # Client testimonials
-│ │ ├── Contact.jsx # Contact form (EmailJS)
-│ │ ├── Footer.jsx # Footer with social links
-│ │ ├── ThemeToggle.jsx # Dark/light mode toggle
-│ │ └── WorldGlobe.jsx # Interactive 3D globe
-│ │
-│ ├── contexts/
-│ │ └── ThemeContext.jsx # Theme state management
-│ │
-│ ├── data/
-│ │ └── data.js # Centralized portfolio data
-│ │
-│ ├── App.jsx
-│ ├── main.jsx
-│ └── index.css
+│   ├── components/
+│   │   ├── Navbar.jsx        # Navigation with theme toggle
+│   │   ├── Hero.jsx          # Hero section with globe
+│   │   ├── About.jsx         # About section
+│   │   ├── Services.jsx      # Services offered
+│   │   ├── Skills.jsx        # Skills with progress bars
+│   │   ├── Portfolio.jsx     # Projects showcase
+│   │   ├── Testimonials.jsx  # Client testimonials
+│   │   ├── Contact.jsx       # Contact form (EmailJS)
+│   │   ├── Footer.jsx        # Footer with social links
+│   │   ├── ThemeToggle.jsx   # Dark/light mode toggle
+│   │   └── WorldGlobe.jsx    # Interactive 3D globe
+│   │
+│   ├── contexts/
+│   │   └── ThemeContext.jsx  # Theme state management
+│   │
+│   ├── data/
+│   │   └── data.js           # Centralized portfolio data
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
 │
 ├── package.json
 ├── tailwind.config.cjs
 ├── postcss.config.cjs
 └── vite.config.js
-
+```
 
 ---
 
@@ -113,46 +110,74 @@ portfolio/
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/allaingaye/portfolio.git
    cd portfolio
+   ```
 
-2) Install dependencies:
+2. **Install dependencies:**
+
+   ```bash
    npm install
+   ```
 
-3) Set up environment variables:
-Create a .env file in the root directory:
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
+3. **Set up environment variables:**
 
-4) Start the development server:
-npm run dev
+   Create a `.env` file in the root directory:
 
-5) Open in your browser:
-http://localhost:5173
+   ```env
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
 
-6) Update Your Information
-Edit src/data/data.js to customize:
+4. **Start the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Open in your browser:**
+
+   ```
+   http://localhost:5173
+   ```
+
+---
+
+## 🎨 Customization
+
+### Update Your Information
+
+Edit `src/data/data.js` to customize:
+
+```javascript
 export const personalInfo = {
   name: "Your Name",
   title: "Your Title",
   email: "your@email.com",
-  // ...
 };
+```
 
-7) Change Theme Colors
-Edit tailwind.config.cjs:
+### Change Theme Colors
+
+Edit `tailwind.config.cjs`:
+
+```javascript
 colors: {
   primary: {
     500: '#3b82f6',
     600: '#2563eb',
-    // ...
   }
 }
+```
 
-8) Update Projects
-Add or edit projects in src/data/data.js:
+### Update Projects
+
+Add or edit projects in `src/data/data.js`:
+
+```javascript
 export const portfolioProjects = [
   {
     id: 1,
@@ -165,83 +190,89 @@ export const portfolioProjects = [
     featured: true,
   },
 ];
+```
 
+---
 
-🌐 Deployment
-This portfolio is deployed on Vercel with automatic deployments.
+## 🌐 Deployment
 
-Deploy Your Own
-Push to GitHub
+This portfolio is deployed on **Vercel** with automatic deployments.
 
-Go to vercel.com
+### Deploy Your Own
 
-Import your repository
+1. Push to GitHub
+2. Go to [vercel.com](https://vercel.com)
+3. Import your repository
+4. Add environment variables
+5. Deploy!
 
-Add environment variables
+Every push to `main` will trigger an automatic deployment.
 
-Deploy!
+---
 
-Every push to main will trigger an automatic deployment.
+## 📸 Screenshots
 
-📸 Screenshots
-🏠 Home Page (Light Mode)
-https://./public/screenshots/home-light.png
+> 📸 Screenshots coming soon! Visit the [live demo](https://portfolio-dg3fqyw7h-allaingaye.vercel.app/) to see it in action.
 
-🌙 Home Page (Dark Mode)
-https://./public/screenshots/home-dark.png
+<!-- 
+When you have screenshots ready, uncomment and add them to /public:
 
-🌍 Interactive 3D Globe
-https://./public/screenshots/globe.png
+### 🏠 Home Page (Light Mode)
+![Home Light](./public/home-light.png)
 
-💼 Portfolio Section
-https://./public/screenshots/portfolio.png
+### 🌙 Home Page (Dark Mode)
+![Home Dark](./public/home-dark.png)
 
-🤝 Contributing
+### 🌍 Interactive 3D Globe
+![Globe](./public/globe.png)
+
+### 💼 Portfolio Section
+![Portfolio](./public/portfolio.png)
+-->
+
+---
+
+## 🤝 Contributing
+
 Contributions, issues, and feature requests are welcome!
 
-1) Fork the project
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-2) Create your feature branch (git checkout -b feature/AmazingFeature)
+---
 
-3) Commit your changes (git commit -m 'Add some AmazingFeature')
+## 👨‍💻 Author
 
-4) Push to the branch (git push origin feature/AmazingFeature)
+**Allingaye Lucien**
 
-5) Open a Pull Request
+- 🌐 Portfolio: [portfolio-dg3fqyw7h-allaingaye.vercel.app](https://portfolio-dg3fqyw7h-allaingaye.vercel.app/)
+- 💼 LinkedIn: [@lucien-allaingaye](https://linkedin.com/in/lucien-allaingaye)
+- 🐙 GitHub: [@allaingaye](https://github.com/allaingaye)
+- 📧 Email: [lucienallingaye@gmail.com](mailto:lucienallingaye@gmail.com)
 
-👨‍💻 Author
-Allingaye Lucien
+---
 
-🌐 Portfolio: portfolio-dg3fqyw7h-allaingaye.vercel.app
+## 🙏 Acknowledgments
 
-💼 LinkedIn:[ @allaingaye](https://linkedin.com/in/lucien-allaingaye)
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [React Globe](https://github.com/vasturiano/react-globe.gl)
+- [EmailJS](https://www.emailjs.com/)
+- [Vercel](https://vercel.com/)
 
-🐙 GitHub: [@allaingaye](https://github.com/allaingaye)
+---
 
-📧 Email: lucienallingaye@gmail.com
+## 📄 License
 
-🙏 Acknowledgments
-React
+This project is **MIT Licensed** — see the [LICENSE](LICENSE) file for details.
 
-Vite
-
-Tailwind CSS
-
-Framer Motion
-
-React Globe
-
-EmailJS
-
-Vercel
-
-<div align="center">
-⭐ If you like this project, please give it a star!
-Built with ❤️ 
-
-</div> ```
-
- License
+```
+MIT License
 
 Copyright (c) 2025 Allingaye Lucien
 
@@ -262,3 +293,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
+
+---
+
+<div align="center">
+
+### ⭐ If you like this project, please give it a star!
+
+**Built with ❤️ in Rwanda 🇷🇼**
+
+</div>
