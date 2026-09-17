@@ -6,9 +6,9 @@
 
 **A modern, responsive portfolio showcasing my projects, skills, and experience.**
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-2563eb?style=for-the-badge)](https://portfolio-dg3fqyw7h-allaingaye.vercel.app/)
+[![Live Demo](([https://portfolio-allaingaye.vercel.app/](https://portfolio-allaingaye.vercel.app/))
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/allaingaye)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/allaingaye)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/lucien-allaingaye)
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lucienallingaye@gmail.com)
 
 </div>
@@ -17,7 +17,7 @@
 
 ## 🔗 Live Demo
 
-👉 **[https://portfolio-dg3fqyw7h-allaingaye.vercel.app/](https://portfolio-dg3fqyw7h-allaingaye.vercel.app/)**
+👉 **[https://portfolio-allaingaye.vercel.app/](https://portfolio-allaingaye.vercel.app/)**
 
 ---
 
