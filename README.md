@@ -31,8 +31,8 @@
 - 🎬 **Smooth Animations** — Powered by Framer Motion
 - 📧 **Working Contact Form** — EmailJS integration for real email delivery
 - 📄 **Downloadable CV** — One-click download of my resume
-- 🎯 **Portfolio Showcase** — Interactive filtering by project category
-- 📊 **Skills Visualization** — Animated skill bars with proficiency levels
+-  **Portfolio Showcase** — Interactive filtering by project category
+-  **Skills Visualization** — Animated skill bars with proficiency levels
 
 ---
 
