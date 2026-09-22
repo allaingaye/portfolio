@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌐 Portfolio — Allingaye Lucien
+#  Portfolio — Allingaye Lucien
 
 ### Software Engineer & Full-Stack Developer
 
@@ -14,10 +14,9 @@
 </div>
 
 ---
-
 ## 🔗 Live Demo
 
-👉 **[https://portfolio-allaingaye.vercel.app/](https://portfolio-allaingaye.vercel.app/)**
+ **[https://portfolio-allaingaye.vercel.app/](https://portfolio-allaingaye.vercel.app/)**
 
 ---
 
@@ -30,7 +29,7 @@
 - ⚡ **Fast Performance** — Built with Vite for lightning-fast builds
 - 🎬 **Smooth Animations** — Powered by Framer Motion
 - 📧 **Working Contact Form** — EmailJS integration for real email delivery
-- 📄 **Downloadable CV** — One-click download of my resume
+-  **Downloadable CV** — One-click download of my resume
 -  **Portfolio Showcase** — Interactive filtering by project category
 -  **Skills Visualization** — Animated skill bars with proficiency levels
 
