@@ -20,7 +20,7 @@
 
 ---
 
-## ✨ Features
+##  Features
 
 -  **Modern UI/UX** — Clean, professional design with smooth animations
 -  **Dark & Light Mode** — Toggle between themes with localStorage persistence
@@ -57,7 +57,7 @@
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 portfolio/
@@ -145,7 +145,7 @@ portfolio/
 
 ---
 
-## 🎨 Customization
+##  Customization
 
 ### Update Your Information
 
