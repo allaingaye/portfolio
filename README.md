@@ -24,8 +24,8 @@
 
 - 🎨 **Modern UI/UX** — Clean, professional design with smooth animations
 - 🌓 **Dark & Light Mode** — Toggle between themes with localStorage persistence
-- 🌍 **Interactive 3D Globe** — Showcases location (Rwanda) with global tech hub connections
-- 📱 **Fully Responsive** — Works perfectly on mobile, tablet, and desktop
+-  **Interactive 3D Globe** — Showcases location (Rwanda) with global tech hub connections
+-  **Fully Responsive** — Works perfectly on mobile, tablet, and desktop
 -  **Fast Performance** — Built with Vite for lightning-fast builds
 -  **Smooth Animations** — Powered by Framer Motion
 -  **Working Contact Form** — EmailJS integration for real email delivery
