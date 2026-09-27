@@ -193,7 +193,7 @@ export const portfolioProjects = [
 
 ---
 
-## 🌐 Deployment
+##  Deployment
 
 This portfolio is deployed on **Vercel** with automatic deployments.
 
@@ -209,9 +209,9 @@ Every push to `main` will trigger an automatic deployment.
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
-> 📸 Screenshots coming soon! Visit the [live demo](https://portfolio-allaingaye.vercel.app/) to see it in action.
+>  Screenshots coming soon! Visit the [live demo](https://portfolio-allaingaye.vercel.app/) to see it in action.
 
  
 When you have screenshots ready, uncomment and add them to /public:
@@ -243,7 +243,7 @@ Contributions, issues, and feature requests are welcome!
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Allingaye Lucien**
 
