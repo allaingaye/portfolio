@@ -12,7 +12,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 dark:bg-black text-white py-12 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
@@ -32,7 +32,10 @@ const Footer = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors duration-300"
+                  className="w-10 h-10 bg-gray-800 dark:bg-[#111111] rounded-full flex items-center justify-center 
+                    hover:bg-primary-600 dark:hover:bg-primary-500 
+                    border border-transparent dark:border-gray-800/50
+                    transition-colors duration-300"
                   aria-label={link.name}
                 >
                   <Icon className="w-5 h-5" />
@@ -42,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 dark:border-gray-800/50 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center transition-colors duration-300">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
           </p>

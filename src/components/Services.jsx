@@ -35,7 +35,7 @@ const Services = () => {
   return (
     <section 
       id="services" 
-      className="py-20 bg-gray-50 dark:bg-gray-950 transition-colors duration-300"
+      className="py-20 bg-gray-50 dark:bg-black transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -71,16 +71,16 @@ const Services = () => {
                 variants={fadeInUp}
                 whileHover={{ y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="group bg-white dark:bg-gray-900 
+                className="group bg-white dark:bg-[#111111] 
                   rounded-2xl p-8 
                   shadow-md hover:shadow-2xl 
-                  dark:shadow-gray-950/50 
+                  dark:shadow-black/50 
                   transition-all duration-300 
-                  border border-gray-100 dark:border-gray-800"
+                  border border-gray-100 dark:border-gray-800/50"
               >
                 {/* Icon Container */}
                 <div className="w-14 h-14 
-                  bg-primary-100 dark:bg-primary-900/30 
+                  bg-primary-100 dark:bg-primary-900/20 
                   rounded-xl flex items-center justify-center mb-6 
                   group-hover:bg-primary-600 dark:group-hover:bg-primary-500 
                   transition-colors duration-300"

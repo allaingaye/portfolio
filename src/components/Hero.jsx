@@ -20,7 +20,7 @@ const Hero = () => {
       id="home" 
       className="min-h-screen flex items-center pt-16 
         bg-gradient-to-br from-blue-50 via-white to-purple-50 
-        dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 
+        dark:from-black dark:via-black dark:to-black 
         overflow-hidden transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -40,7 +40,7 @@ const Hero = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
                 className="inline-flex items-center gap-2 px-4 py-1.5 
-                  bg-primary-50 dark:bg-primary-900/30 
+                  bg-primary-50 dark:bg-primary-900/20 
                   text-primary-700 dark:text-primary-300 
                   rounded-full text-sm font-medium 
                   border border-primary-100 dark:border-primary-800/50
@@ -69,7 +69,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="text-xl md:text-2xl lg:text-2xl 
-                  text-gray-600 dark:text-gray-300 
+                  text-gray-600 dark:text-gray-400 
                   font-medium transition-colors duration-300"
               >
                 {personalInfo.title}
@@ -100,10 +100,10 @@ const Hero = () => {
                 className="group inline-flex items-center px-6 py-3 
                   bg-primary-600 dark:bg-primary-500 
                   text-white rounded-full font-medium 
-                  hover:bg-primary-700 dark:hover:bg-primary-600 
+                  hover:bg-primary-700 dark:hover:bg-primary-400 
                   transition-all duration-300 
                   shadow-lg shadow-primary-500/25 
-                  hover:shadow-xl hover:shadow-primary-500/30"
+                  hover:shadow-xl hover:shadow-primary-500/40"
               >
                 View My Work
                 <FaArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -111,9 +111,9 @@ const Hero = () => {
               <a 
                 href="#contact" 
                 className="inline-flex items-center px-6 py-3 
-                  bg-white dark:bg-gray-800 
+                  bg-white dark:bg-[#111111] 
                   text-gray-700 dark:text-gray-200 
-                  border border-gray-200 dark:border-gray-700 
+                  border border-gray-200 dark:border-gray-800 
                   rounded-full font-medium 
                   hover:border-primary-600 dark:hover:border-primary-400 
                   hover:text-primary-600 dark:hover:text-primary-400 
@@ -129,7 +129,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
               className="flex flex-wrap gap-8 pt-6 
-                border-t border-gray-100 dark:border-gray-800 
+                border-t border-gray-100 dark:border-gray-800/50 
                 transition-colors duration-300"
             >
               {[
@@ -145,7 +145,7 @@ const Hero = () => {
                   className="flex items-center space-x-3"
                 >
                   <div className="w-10 h-10 rounded-lg 
-                    bg-primary-50 dark:bg-primary-900/30 
+                    bg-primary-50 dark:bg-primary-900/20 
                     flex items-center justify-center 
                     transition-colors duration-300"
                   >

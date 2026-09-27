@@ -29,7 +29,7 @@ const Portfolio = () => {
   return (
     <section 
       id="portfolio" 
-      className="py-20 bg-gray-50 dark:bg-gray-950 transition-colors duration-300"
+      className="py-20 bg-gray-50 dark:bg-black transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -66,7 +66,7 @@ const Portfolio = () => {
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 filter === category
                   ? 'bg-primary-600 dark:bg-primary-500 text-white shadow-lg shadow-primary-500/25'
-                  : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700'
+                  : 'bg-white dark:bg-[#111111] text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-[#1a1a1a]'
               }`}
             >
               {category}
@@ -88,10 +88,10 @@ const Portfolio = () => {
               variants={fadeInUp}
               whileHover={{ y: -10 }}
               transition={{ duration: 0.3 }}
-              className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden 
-                shadow-md hover:shadow-2xl dark:shadow-gray-950/50 
+              className="group bg-white dark:bg-[#111111] rounded-2xl overflow-hidden 
+                shadow-md hover:shadow-2xl dark:shadow-black/50 
                 transition-all duration-300 
-                border border-gray-100 dark:border-gray-800"
+                border border-gray-100 dark:border-gray-800/50"
             >
               {/* Project Image Area */}
               <div className="relative aspect-video bg-gradient-to-br from-primary-400 to-primary-600 dark:from-primary-600 dark:to-primary-800 flex items-center justify-center">
@@ -112,7 +112,7 @@ const Portfolio = () => {
               <div className="p-6">
                 <div className="flex items-start justify-between mb-2">
                   <span className="text-sm text-primary-600 dark:text-primary-400 font-semibold 
-                    bg-primary-50 dark:bg-primary-900/30 px-3 py-1 rounded-full 
+                    bg-primary-50 dark:bg-primary-900/20 px-3 py-1 rounded-full 
                     transition-colors duration-300"
                   >
                     {project.category}
@@ -130,20 +130,20 @@ const Portfolio = () => {
                   {project.technologies.slice(0, 3).map((tech, idx) => (
                     <span
                       key={idx}
-                      className="text-xs bg-gray-100 dark:bg-gray-800 
+                      className="text-xs bg-gray-100 dark:bg-[#1a1a1a] 
                         text-gray-700 dark:text-gray-300 
                         px-2 py-1 rounded-full 
-                        border border-transparent dark:border-gray-700
+                        border border-transparent dark:border-gray-800/50
                         transition-colors duration-300"
                     >
                       {tech}
                     </span>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span className="text-xs bg-gray-100 dark:bg-gray-800 
+                    <span className="text-xs bg-gray-100 dark:bg-[#1a1a1a] 
                       text-gray-700 dark:text-gray-300 
                       px-2 py-1 rounded-full 
-                      border border-transparent dark:border-gray-700"
+                      border border-transparent dark:border-gray-800/50"
                     >
                       +{project.technologies.length - 3} more
                     </span>
@@ -159,7 +159,7 @@ const Portfolio = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 inline-flex items-center justify-center px-4 py-2 
-                      border border-gray-300 dark:border-gray-700 
+                      border border-gray-300 dark:border-gray-800 
                       rounded-lg 
                       text-gray-700 dark:text-gray-300 
                       hover:border-primary-600 dark:hover:border-primary-400 
@@ -179,7 +179,7 @@ const Portfolio = () => {
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 
                         bg-primary-600 dark:bg-primary-500 
                         text-white rounded-lg 
-                        hover:bg-primary-700 dark:hover:bg-primary-600 
+                        hover:bg-primary-700 dark:hover:bg-primary-400 
                         transition-all duration-300
                         shadow-lg shadow-primary-500/25"
                     >

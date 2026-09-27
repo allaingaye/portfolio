@@ -28,7 +28,7 @@ const Skills = () => {
   return (
     <section 
       id="skills" 
-      className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
+      className="py-20 bg-white dark:bg-black transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -62,12 +62,12 @@ const Skills = () => {
               variants={fadeInUp}
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
-              className="bg-gray-50 dark:bg-gray-800/50 
+              className="bg-gray-50 dark:bg-[#111111] 
                 rounded-2xl p-8 
                 shadow-md hover:shadow-xl 
-                dark:shadow-gray-950/50 
+                dark:shadow-black/50 
                 transition-all duration-300 
-                border border-gray-100 dark:border-gray-800"
+                border border-gray-100 dark:border-gray-800/50"
             >
               {/* Category Title */}
               <h3 className="text-xl font-bold 
@@ -104,7 +104,7 @@ const Skills = () => {
                     </div>
 
                     {/* Progress Bar */}
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden transition-colors duration-300">
+                    <div className="w-full bg-gray-200 dark:bg-[#1a1a1a] rounded-full h-2 overflow-hidden transition-colors duration-300">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.percentage}%` }}

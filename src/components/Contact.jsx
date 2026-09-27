@@ -99,7 +99,7 @@ const Contact = () => {
   return (
     <section 
       id="contact" 
-      className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
+      className="py-20 bg-white dark:bg-black transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -135,7 +135,7 @@ const Contact = () => {
                 transition={{ duration: 0.2 }}
                 className="flex items-start space-x-4"
               >
-                <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors duration-300">
+                <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/20 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors duration-300">
                   <item.icon className="w-6 h-6 text-primary-600 dark:text-primary-400" />
                 </div>
                 <div>
@@ -170,8 +170,8 @@ const Contact = () => {
           >
             <form 
               onSubmit={handleSubmit} 
-              className="bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-8 shadow-md 
-                border border-gray-100 dark:border-gray-800 
+              className="bg-gray-50 dark:bg-[#111111] rounded-2xl p-8 shadow-md 
+                border border-gray-100 dark:border-gray-800/50 
                 transition-colors duration-300"
             >
               {/* Status Message */}
@@ -201,10 +201,10 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 
-                      bg-white dark:bg-gray-900 
-                      border border-gray-300 dark:border-gray-700 
+                      bg-white dark:bg-[#0a0a0a] 
+                      border border-gray-300 dark:border-gray-800 
                       text-gray-900 dark:text-white 
-                      placeholder-gray-400 dark:placeholder-gray-500 
+                      placeholder-gray-400 dark:placeholder-gray-600 
                       rounded-lg 
                       focus:ring-2 focus:ring-primary-500 focus:border-primary-500 
                       outline-none transition"
@@ -227,10 +227,10 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 
-                      bg-white dark:bg-gray-900 
-                      border border-gray-300 dark:border-gray-700 
+                      bg-white dark:bg-[#0a0a0a] 
+                      border border-gray-300 dark:border-gray-800 
                       text-gray-900 dark:text-white 
-                      placeholder-gray-400 dark:placeholder-gray-500 
+                      placeholder-gray-400 dark:placeholder-gray-600 
                       rounded-lg 
                       focus:ring-2 focus:ring-primary-500 focus:border-primary-500 
                       outline-none transition"
@@ -255,10 +255,10 @@ const Contact = () => {
                   onChange={handleChange}
                   rows="5"
                   className="w-full px-4 py-3 
-                    bg-white dark:bg-gray-900 
-                    border border-gray-300 dark:border-gray-700 
+                    bg-white dark:bg-[#0a0a0a] 
+                    border border-gray-300 dark:border-gray-800 
                     text-gray-900 dark:text-white 
-                    placeholder-gray-400 dark:placeholder-gray-500 
+                    placeholder-gray-400 dark:placeholder-gray-600 
                     rounded-lg 
                     focus:ring-2 focus:ring-primary-500 focus:border-primary-500 
                     outline-none transition resize-none"
@@ -276,8 +276,8 @@ const Contact = () => {
                   text-white rounded-lg font-medium 
                   transition-all duration-300 
                   shadow-lg shadow-primary-500/25 
-                  hover:shadow-xl hover:shadow-primary-500/30 
-                  ${isSending ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-700 dark:hover:bg-primary-600'}`}
+                  hover:shadow-xl hover:shadow-primary-500/40 
+                  ${isSending ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-700 dark:hover:bg-primary-400'}`}
               >
                 {isSending ? (
                   <>

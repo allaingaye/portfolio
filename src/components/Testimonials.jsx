@@ -22,7 +22,7 @@ const Testimonials = () => {
   return (
     <section 
       id="testimonials" 
-      className="py-20 bg-primary-600 dark:bg-primary-800 transition-colors duration-300"
+      className="py-20 bg-primary-600 dark:bg-black transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -37,7 +37,7 @@ const Testimonials = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             What People <span className="text-yellow-300">Say</span>
           </h2>
-          <p className="text-blue-100 max-w-2xl mx-auto">
+          <p className="text-blue-100 dark:text-gray-400 max-w-2xl mx-auto transition-colors duration-300">
             Testimonials from clients and colleagues I've worked with
           </p>
         </motion.div>
@@ -51,14 +51,15 @@ const Testimonials = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}
-              className="bg-white dark:bg-gray-900 
+              className="bg-white dark:bg-[#111111] 
                 rounded-3xl p-8 md:p-12 
-                shadow-2xl dark:shadow-gray-950/50 
+                shadow-2xl dark:shadow-black/50 
+                border border-transparent dark:border-gray-800/50
                 transition-colors duration-300"
             >
               {/* Quote Icon */}
               <FaQuoteLeft className="w-12 h-12 
-                text-primary-400 dark:text-primary-500 
+                text-primary-400 dark:text-primary-400 
                 mb-6 transition-colors duration-300" 
               />
 
@@ -77,7 +78,7 @@ const Testimonials = () => {
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                   className="w-14 h-14 
-                    bg-primary-100 dark:bg-primary-900/40 
+                    bg-primary-100 dark:bg-primary-900/20 
                     rounded-full flex items-center justify-center mr-4 
                     transition-colors duration-300"
                 >
@@ -105,10 +106,11 @@ const Testimonials = () => {
             onClick={prev}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 
               w-12 h-12 
-              bg-white dark:bg-gray-800 
-              rounded-full shadow-lg 
+              bg-white dark:bg-[#111111] 
+              rounded-full shadow-lg dark:shadow-black/50 
               flex items-center justify-center 
-              hover:bg-gray-50 dark:hover:bg-gray-700 
+              hover:bg-gray-50 dark:hover:bg-[#1a1a1a] 
+              border border-transparent dark:border-gray-800/50
               transition-all duration-300"
             aria-label="Previous testimonial"
           >
@@ -123,10 +125,11 @@ const Testimonials = () => {
             onClick={next}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 
               w-12 h-12 
-              bg-white dark:bg-gray-800 
-              rounded-full shadow-lg 
+              bg-white dark:bg-[#111111] 
+              rounded-full shadow-lg dark:shadow-black/50 
               flex items-center justify-center 
-              hover:bg-gray-50 dark:hover:bg-gray-700 
+              hover:bg-gray-50 dark:hover:bg-[#1a1a1a] 
+              border border-transparent dark:border-gray-800/50
               transition-all duration-300"
             aria-label="Next testimonial"
           >
