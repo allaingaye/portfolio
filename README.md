@@ -216,22 +216,22 @@ Every push to `main` will trigger an automatic deployment.
  
 When you have screenshots ready, uncomment and add them to /public:
 
-### 🏠 Home Page (Light Mode)
+###  Home Page (Light Mode)
 ![Home Light](./public/home-light.png)
 
-### 🌙 Home Page (Dark Mode)
+###  Home Page (Dark Mode)
 ![Home Dark](./public/home-dark.png)
 
-### 🌍 Interactive 3D Globe
+### Interactive 3D Globe
 ![Globe](./public/globe.png)
 
-### 💼 Portfolio Section
+###  Portfolio Section
 ![Portfolio](./public/portfolio.png)
 
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions, issues, and feature requests are welcome!
 
@@ -247,10 +247,10 @@ Contributions, issues, and feature requests are welcome!
 
 **Allingaye Lucien**
 
-- 🌐 Portfolio: [portfolio-dg3fqyw7h-allaingaye.vercel.app](https://portfolio-dg3fqyw7h-allaingaye.vercel.app/)
-- 💼 LinkedIn: [@lucien-allaingaye](https://linkedin.com/in/lucien-allaingaye)
-- 🐙 GitHub: [@allaingaye](https://github.com/allaingaye)
-- 📧 Email: [lucienallingaye@gmail.com](mailto:lucienallingaye@gmail.com)
+-  Portfolio: [portfolio-dg3fqyw7h-allaingaye.vercel.app](https://portfolio-dg3fqyw7h-allaingaye.vercel.app/)
+-  LinkedIn: [@lucien-allaingaye](https://linkedin.com/in/lucien-allaingaye)
+-  GitHub: [@allaingaye](https://github.com/allaingaye)
+-  Email: [lucienallingaye@gmail.com](mailto:lucienallingaye@gmail.com)
 
 ---
 
