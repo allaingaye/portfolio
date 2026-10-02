@@ -14,7 +14,7 @@
 </div>
 
 ---
-## 🔗 Live Demo
+##  Live Demo
 
  **[https://portfolio-allaingaye.vercel.app/](https://portfolio-allaingaye.vercel.app/)**
 
@@ -254,7 +254,7 @@ Contributions, issues, and feature requests are welcome!
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [React](https://react.dev/)
 - [Vite](https://vitejs.dev/)
@@ -266,7 +266,7 @@ Contributions, issues, and feature requests are welcome!
 
 ---
 
-## 📄 License
+##  License
 
 This project is **MIT Licensed** — see the [LICENSE](LICENSE) file for details.
 
@@ -298,7 +298,7 @@ SOFTWARE.
 
 <div align="center">
 
-### ⭐ If you like this project, please give it a star!
+###  If you like this project, please give it a star!
 
 **Built with ❤️ **
 
