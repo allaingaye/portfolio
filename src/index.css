@@ -46,7 +46,34 @@
     @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
   }
 }
-/* Make the globe canvas transparent */
+
+/* ═══════════════════════════════════════════
+   DARK MODE OVERRIDES
+   ═══════════════════════════════════════════ */
+
+/* Pure black background in dark mode */
+.dark body {
+  background-color: #000000;
+  color: #fafafa;
+}
+
+/* Dark scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background-color: #0a0a0a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #262626;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #404040;
+}
+
+/* ═══════════════════════════════════════════
+   GLOBE TRANSPARENCY
+   ═══════════════════════════════════════════ */
+
 .globe-wrapper canvas {
   background: transparent !important;
   background-color: transparent !important;
@@ -61,4 +88,49 @@
 .globe-wrapper > div {
   background: transparent !important;
   background-color: transparent !important;
+}
+
+/* ═══════════════════════════════════════════
+   ANIMATED GRADIENT TEXT (for name)
+   ═══════════════════════════════════════════ */
+
+.animated-gradient-text {
+  background: linear-gradient(
+    90deg,
+    #2563eb 0%,
+    #60a5fa 25%,
+    #a78bfa 50%,
+    #60a5fa 75%,
+    #2563eb 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Dark mode — brighter colors for better contrast */
+.dark .animated-gradient-text {
+  background: linear-gradient(
+    90deg,
+    #60a5fa 0%,
+    #93c5fd 25%,
+    #c4b5fd 50%,
+    #93c5fd 75%,
+    #60a5fa 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

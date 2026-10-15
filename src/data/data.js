@@ -8,7 +8,7 @@ export const personalInfo = {
   github: "https://github.com/allaingaye",
   linkedin: "https://linkedin.com/in/lucien-allaingaye",
   yearsExperience: "1+",
-  projectsCompleted: "7+",
+  projectsCompleted: "9+",
   happyClients: "5+",
   about: "I'm a passionate Software Engineer with expertise in full-stack web development, AI integration, software architecture, and system design. I enjoy creating innovative solutions that solve real-world problems. With a background in Software Engineering and hands-on experience building AI-powered applications, I've worked on various projects ranging from resume analyzers to production traceability systems. My approach combines analytical thinking with creative problem-solving, ensuring that I deliver efficient, scalable, and user-friendly solutions. I'm constantly learning new technologies and methodologies to stay at the forefront of the industry."
 };
@@ -55,8 +55,8 @@ export const skills = {
       { name: "Django", percentage: 85, icon: "Server" },
       { name: "Java", percentage: 85, icon: "Coffee" },
       { name: "Spring Boot", percentage: 80, icon: "Leaf" },
-      { name: "PHP", percentage: 80, icon: "Code2" },          // ✅ Added PHP
-      { name: "Laravel", percentage: 75, icon: "Server" },     // ✅ Added Laravel
+      { name: "PHP", percentage: 80, icon: "Code2" },
+      { name: "Laravel", percentage: 75, icon: "Server" },
       { name: "Node.js", percentage: 75, icon: "Server" },
     ]
   },
@@ -84,6 +84,30 @@ export const skills = {
 export const portfolioProjects = [
   {
     id: 1,
+    title: "PayPilot Shield",
+    category: "AI Agents",
+    description: "AI agent that pays supplier invoices through PayPal Payouts — but only inside an owner-signed spending policy, and only after the invoice passes a truth check. Every decision is written to a replayable audit log.",
+    technologies: ["FastAPI", "React", "TypeScript", "PostgreSQL", "PayPal Payouts", "LLM", "Docker"],
+    github: "https://github.com/Elthiero/paypilot-shield",
+    liveDemo: "https://paypilot.donambi.dev",
+    image: "/projects/paypilot.jpg",
+    featured: true,
+    badge: "🏆 PayPal AI Hackathon",
+  },
+  {
+    id: 2,
+    title: "URL Shortener API",
+    category: "APIs",
+    description: "Production-grade REST API for shortening URLs with click analytics, Redis rate limiting, Sanctum auth, and a 5-container Docker stack. Built with Laravel 12, PHP 8.4, and Redis 7.",
+    technologies: ["Laravel 12", "PHP 8.4", "Redis 7", "Docker", "Sanctum", "Pest 4", "Nginx"],
+    github: "https://github.com/allaingaye/url-shortener",
+    liveDemo: "#",
+    image: "/projects/url-shortener.jpg",
+    featured: true,
+    badge: "🧪 61 Tests Passing",
+  },
+  {
+    id: 3,
     title: "Resume Analyzer",
     category: "Web Apps",
     description: "AI-powered resume analysis platform with ATS compatibility evaluation, skill gap analysis, and automatic content generation.",
@@ -94,50 +118,15 @@ export const portfolioProjects = [
     featured: true,
   },
   {
-    id: 2,
+    id: 4,
     title: "SmartTask",
     category: "Web Apps",
     description: "AI-powered task management system with real-time collaboration, WebSocket notifications, and intelligent insights.",
     technologies: ["Django", "React", "WebSockets", "Redis", "OpenAI"],
     github: "https://github.com/allaingaye/smarttask",
-    liveDemo: "https://smarttask-frontend-l1si.onrender.com",
     image: "/projects/smarttask.jpg",
     featured: true,
   },
-  {
-    id: 3,
-    title: "ProTrack",
-    category: "Systems",
-    description: "Production process automation and traceability system with QR/barcode tracking and quality control checkpoints.",
-    technologies: ["Java", "Spring Boot", "PostgreSQL", "Hibernate"],
-    github: "https://github.com/allaingaye/ProTrack-Production-Traceability--System",
-    liveDemo: "#",
-    image: "/projects/protrack.jpg",
-    featured: true,
-  },
-  {
-    id: 4,
-    title: "AUCA Library Management",
-    category: "Systems",
-    description: "Library management system with role-based access, membership tracking, and fine calculation.",
-    technologies: ["Java", "Servlets", "JSP", "PostgreSQL"],
-    github: "https://github.com/allaingaye/Library-Management-System",
-    liveDemo: "#",
-    image: "/projects/library.jpg",
-    featured: false,
-  },
-  // ✅ Optional: Add a Laravel/PHP project if you have one
-  // {
-  //   id: 5,
-  //   title: "Your Laravel Project",
-  //   category: "Web Apps",
-  //   description: "Description of your Laravel project.",
-  //   technologies: ["PHP", "Laravel", "MySQL", "Tailwind CSS"],
-  //   github: "https://github.com/allaingaye/your-laravel-project",
-  //   liveDemo: "#",
-  //   image: "/projects/laravel-project.jpg",
-  //   featured: false,
-  // },
 ];
 
 export const testimonials = [

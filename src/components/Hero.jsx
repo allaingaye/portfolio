@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowRight, FaCode, FaCoffee, FaBriefcase } from 'react-icons/fa';
+import { FaArrowRight, FaCode, FaCoffee, FaBriefcase, FaBolt } from 'react-icons/fa';
 import { personalInfo } from '../data/data';
 import WorldGlobe from './WorldGlobe';
 
@@ -18,12 +18,34 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center pt-16 
+      className="relative min-h-screen flex items-center pt-16 
         bg-gradient-to-br from-blue-50 via-white to-purple-50 
         dark:from-black dark:via-black dark:to-black 
         overflow-hidden transition-colors duration-300"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      {/* Ambient background orbs (subtle, floating) */}
+      <motion.div
+        animate={{
+          x: [0, 30, 0],
+          y: [0, -20, 0],
+        }}
+        transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute top-1/4 -left-20 w-72 h-72 
+          bg-primary-400/20 dark:bg-primary-500/10 
+          rounded-full blur-3xl pointer-events-none"
+      />
+      <motion.div
+        animate={{
+          x: [0, -30, 0],
+          y: [0, 20, 0],
+        }}
+        transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+        className="absolute bottom-1/4 -right-20 w-80 h-80 
+          bg-purple-400/20 dark:bg-purple-500/10 
+          rounded-full blur-3xl pointer-events-none"
+      />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left Content */}
           <motion.div
@@ -34,23 +56,32 @@ const Hero = () => {
             className="space-y-8 lg:pr-8"
           >
             <div className="space-y-4">
-              {/* Availability Badge */}
-              <motion.span
+              {/* Availability Badge - Interactive */}
+              <motion.a
+                href="#contact"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                className="group inline-flex items-center gap-2 px-4 py-1.5 
                   bg-primary-50 dark:bg-primary-900/20 
                   text-primary-700 dark:text-primary-300 
                   rounded-full text-sm font-medium 
                   border border-primary-100 dark:border-primary-800/50
-                  transition-colors duration-300"
+                  hover:border-primary-300 dark:hover:border-primary-600/50
+                  hover:shadow-md hover:shadow-primary-500/10
+                  transition-all duration-300 cursor-pointer"
               >
-                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
                 Available for Work · Remote
-              </motion.span>
+                <FaArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -ml-1 group-hover:ml-0 transition-all duration-300" />
+              </motion.a>
               
-              {/* Heading */}
+              {/* Heading with Animated Name */}
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -60,7 +91,27 @@ const Hero = () => {
                 <span className="block text-gray-900 dark:text-white transition-colors duration-300">
                   Hi, I'm
                 </span>
-                <span className="gradient-text">{personalInfo.name}</span>
+                <span className="animated-gradient-text inline-block">
+                  {personalInfo.name.split('').map((char, index) => (
+                    <motion.span
+                      key={index}
+                      initial={{ opacity: 0, y: 15 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        delay: 0.6 + index * 0.04,
+                        duration: 0.4,
+                        ease: 'easeOut'
+                      }}
+                      className="inline-block hover:scale-125 transition-transform duration-200 cursor-default"
+                      whileHover={{ 
+                        y: -6,
+                        transition: { duration: 0.15 }
+                      }}
+                    >
+                      {char === ' ' ? '\u00A0' : char}
+                    </motion.span>
+                  ))}
+                </span>
               </motion.h1>
               
               {/* Title */}
@@ -95,21 +146,34 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="flex flex-wrap gap-4"
             >
-              <a 
+              <motion.a 
                 href="#portfolio" 
-                className="group inline-flex items-center px-6 py-3 
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="group relative inline-flex items-center px-6 py-3 
                   bg-primary-600 dark:bg-primary-500 
                   text-white rounded-full font-medium 
                   hover:bg-primary-700 dark:hover:bg-primary-400 
                   transition-all duration-300 
                   shadow-lg shadow-primary-500/25 
-                  hover:shadow-xl hover:shadow-primary-500/40"
+                  hover:shadow-xl hover:shadow-primary-500/40
+                  overflow-hidden"
               >
-                View My Work
-                <FaArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a 
+                {/* Shine effect on hover */}
+                <span className="absolute inset-0 
+                  bg-gradient-to-r from-transparent via-white/20 to-transparent 
+                  -translate-x-full group-hover:translate-x-full 
+                  transition-transform duration-1000" 
+                />
+                <span className="relative flex items-center">
+                  View My Work
+                  <FaArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </motion.a>
+              <motion.a 
                 href="#contact" 
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center px-6 py-3 
                   bg-white dark:bg-[#111111] 
                   text-gray-700 dark:text-gray-200 
@@ -120,7 +184,7 @@ const Hero = () => {
                   transition-all duration-300"
               >
                 Contact Me
-              </a>
+              </motion.a>
             </motion.div>
 
             {/* Stats */}
@@ -142,14 +206,21 @@ const Hero = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.8 + (index * 0.1), duration: 0.5 }}
-                  className="flex items-center space-x-3"
+                  whileHover={{ y: -4 }}
+                  className="group flex items-center space-x-3 cursor-default"
                 >
                   <div className="w-10 h-10 rounded-lg 
                     bg-primary-50 dark:bg-primary-900/20 
                     flex items-center justify-center 
-                    transition-colors duration-300"
+                    group-hover:bg-primary-600 dark:group-hover:bg-primary-500
+                    group-hover:scale-110
+                    transition-all duration-300"
                   >
-                    <stat.icon className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+                    <stat.icon className="w-5 h-5 
+                      text-primary-600 dark:text-primary-400 
+                      group-hover:text-white 
+                      transition-colors duration-300" 
+                    />
                   </div>
                   <div>
                     <div className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300">

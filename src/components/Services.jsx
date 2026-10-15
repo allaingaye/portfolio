@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   FaCode, FaMobile, FaPalette, FaServer, 
-  FaCloud, FaBriefcase 
+  FaCloud, FaBriefcase, FaArrowRight 
 } from 'react-icons/fa';
 import { services } from '../data/data';
 
@@ -69,21 +69,32 @@ const Services = () => {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                whileHover={{ y: -10 }}
-                transition={{ duration: 0.3 }}
-                className="group bg-white dark:bg-[#111111] 
-                  rounded-2xl p-8 
-                  shadow-md hover:shadow-2xl 
-                  dark:shadow-black/50 
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
+                className="group relative flex flex-col 
+                  bg-white dark:bg-[#111111] 
+                  rounded-xl p-8 
+                  border border-gray-200 dark:border-gray-800
+                  hover:border-primary-500/50 dark:hover:border-primary-500/50
+                  hover:shadow-lg hover:shadow-primary-500/5 dark:hover:shadow-primary-500/10
                   transition-all duration-300 
-                  border border-gray-100 dark:border-gray-800/50"
+                  overflow-hidden"
               >
+                {/* Decorative corner gradient (subtle) */}
+                <div className="absolute top-0 right-0 w-32 h-32 
+                  bg-gradient-to-br from-primary-500/0 to-primary-500/0 
+                  group-hover:from-primary-500/5 group-hover:to-primary-500/0
+                  rounded-full blur-2xl 
+                  transition-all duration-500" 
+                />
+
                 {/* Icon Container */}
-                <div className="w-14 h-14 
+                <div className="relative w-14 h-14 
                   bg-primary-100 dark:bg-primary-900/20 
                   rounded-xl flex items-center justify-center mb-6 
                   group-hover:bg-primary-600 dark:group-hover:bg-primary-500 
-                  transition-colors duration-300"
+                  group-hover:scale-110
+                  transition-all duration-300"
                 >
                   <IconComponent className="w-7 h-7 
                     text-primary-600 dark:text-primary-400 
@@ -93,17 +104,36 @@ const Services = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold 
+                <h3 className="relative text-xl font-bold 
                   text-gray-800 dark:text-white 
-                  mb-3 transition-colors duration-300"
+                  mb-3 
+                  group-hover:text-primary-600 dark:group-hover:text-primary-400 
+                  transition-colors duration-300"
                 >
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed transition-colors duration-300">
+                <p className="relative text-gray-600 dark:text-gray-400 leading-relaxed 
+                  transition-colors duration-300 mb-4">
                   {service.description}
                 </p>
+
+                {/* Subtle "Learn more" hint (appears on hover) */}
+                <div className="relative mt-auto pt-4 
+                  border-t border-gray-100 dark:border-gray-800
+                  opacity-0 group-hover:opacity-100 
+                  -translate-x-2 group-hover:translate-x-0
+                  transition-all duration-300"
+                >
+                  <span className="inline-flex items-center text-sm font-medium 
+                    text-primary-600 dark:text-primary-400">
+                    Available
+                    <FaArrowRight className="w-3 h-3 ml-2 
+                      group-hover:translate-x-1 transition-transform duration-300" 
+                    />
+                  </span>
+                </div>
               </motion.div>
             );
           })}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaMapPin, FaEnvelope, FaPhone, FaPaperPlane } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaMapPin, FaEnvelope, FaPhone, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import { personalInfo } from '../data/data';
 
@@ -40,7 +40,6 @@ const Contact = () => {
     setIsSending(true);
     setStatus({ type: '', message: '' });
 
-    // Your EmailJS credentials
     const SERVICE_ID = 'service_j43ag0b';
     const TEMPLATE_ID = 'template_rlce80o';
     const PUBLIC_KEY = 'RMiVGBBgutYvF5W3k';
@@ -70,7 +69,7 @@ const Contact = () => {
       
       setStatus({
         type: 'success',
-        message: '✅ Message sent successfully! I\'ll get back to you soon.'
+        message: 'Message sent successfully! I\'ll get back to you soon.'
       });
       
       setFormData({
@@ -83,7 +82,7 @@ const Contact = () => {
       console.error('FAILED...', error);
       setStatus({
         type: 'error',
-        message: '❌ Failed to send message. Please try again or email me directly.'
+        message: 'Failed to send message. Please try again or email me directly.'
       });
     } finally {
       setIsSending(false);
@@ -131,26 +130,60 @@ const Contact = () => {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                whileHover={{ x: 10 }}
-                transition={{ duration: 0.2 }}
-                className="flex items-start space-x-4"
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
+                className="group relative flex items-start gap-4 
+                  bg-gray-50 dark:bg-[#111111] 
+                  rounded-xl p-5 
+                  border border-gray-200 dark:border-gray-800
+                  hover:border-primary-500/50 dark:hover:border-primary-500/50
+                  hover:shadow-lg hover:shadow-primary-500/5 dark:hover:shadow-primary-500/10
+                  transition-all duration-300 
+                  overflow-hidden"
               >
-                <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/20 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors duration-300">
-                  <item.icon className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                {/* Corner glow */}
+                <div className="absolute top-0 right-0 w-24 h-24 
+                  bg-gradient-to-br from-primary-500/0 to-primary-500/0 
+                  group-hover:from-primary-500/5 group-hover:to-primary-500/0
+                  rounded-full blur-2xl 
+                  transition-all duration-500" 
+                />
+
+                {/* Icon */}
+                <div className="relative w-12 h-12 flex-shrink-0
+                  bg-primary-100 dark:bg-primary-900/20 
+                  rounded-xl flex items-center justify-center 
+                  group-hover:bg-primary-600 dark:group-hover:bg-primary-500 
+                  group-hover:scale-110
+                  transition-all duration-300"
+                >
+                  <item.icon className="w-5 h-5 
+                    text-primary-600 dark:text-primary-400 
+                    group-hover:text-white 
+                    transition-colors duration-300" 
+                  />
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-800 dark:text-white transition-colors duration-300">
+
+                {/* Text */}
+                <div className="relative min-w-0">
+                  <h4 className="text-sm font-semibold uppercase tracking-wide 
+                    text-gray-500 dark:text-gray-500 
+                    mb-1 
+                    transition-colors duration-300">
                     {item.label}
                   </h4>
                   {item.link ? (
                     <a 
                       href={item.link} 
-                      className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                      className="text-gray-800 dark:text-white 
+                        hover:text-primary-600 dark:hover:text-primary-400 
+                        transition-colors duration-200 
+                        break-all"
                     >
                       {item.value}
                     </a>
                   ) : (
-                    <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
+                    <p className="text-gray-800 dark:text-white transition-colors duration-300 break-words">
                       {item.value}
                     </p>
                   )}
@@ -170,30 +203,48 @@ const Contact = () => {
           >
             <form 
               onSubmit={handleSubmit} 
-              className="bg-gray-50 dark:bg-[#111111] rounded-2xl p-8 shadow-md 
-                border border-gray-100 dark:border-gray-800/50 
-                transition-colors duration-300"
+              className="relative bg-gray-50 dark:bg-[#111111] 
+                rounded-xl p-8 
+                border border-gray-200 dark:border-gray-800
+                transition-colors duration-300 
+                overflow-hidden"
             >
-              {/* Status Message */}
-              {status.message && (
-                <div className={`mb-4 p-4 rounded-lg border ${
-                  status.type === 'success' 
-                    ? 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800' 
-                    : 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 border-red-200 dark:border-red-800'
-                }`}>
-                  {status.message}
-                </div>
-              )}
+              {/* Corner glow */}
+              <div className="absolute top-0 right-0 w-40 h-40 
+                bg-gradient-to-br from-primary-500/5 to-primary-500/0
+                rounded-full blur-3xl 
+                pointer-events-none" 
+              />
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 }}
-                >
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
-                    Name *
+              {/* Status Message */}
+              <AnimatePresence mode="wait">
+                {status.message && (
+                  <motion.div
+                    key={status.type}
+                    initial={{ opacity: 0, y: -10, height: 0 }}
+                    animate={{ opacity: 1, y: 0, height: 'auto' }}
+                    exit={{ opacity: 0, y: -10, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className={`relative mb-6 p-4 rounded-lg border flex items-start gap-3 ${
+                      status.type === 'success' 
+                        ? 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800' 
+                        : 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 border-red-200 dark:border-red-800'
+                    }`}
+                  >
+                    {status.type === 'success' && (
+                      <FaCheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                    )}
+                    <span className="text-sm font-medium">{status.message}</span>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <div className="relative grid sm:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label className="block text-sm font-medium 
+                    text-gray-700 dark:text-gray-300 
+                    mb-2 transition-colors duration-300">
+                    Name <span className="text-primary-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -206,20 +257,18 @@ const Contact = () => {
                       text-gray-900 dark:text-white 
                       placeholder-gray-400 dark:placeholder-gray-600 
                       rounded-lg 
-                      focus:ring-2 focus:ring-primary-500 focus:border-primary-500 
-                      outline-none transition"
+                      focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 
+                      hover:border-gray-400 dark:hover:border-gray-700
+                      outline-none transition-all duration-200"
                     placeholder="Your name"
                     required
                   />
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
-                >
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
-                    Email *
+                </div>
+                <div>
+                  <label className="block text-sm font-medium 
+                    text-gray-700 dark:text-gray-300 
+                    mb-2 transition-colors duration-300">
+                    Email <span className="text-primary-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -232,22 +281,20 @@ const Contact = () => {
                       text-gray-900 dark:text-white 
                       placeholder-gray-400 dark:placeholder-gray-600 
                       rounded-lg 
-                      focus:ring-2 focus:ring-primary-500 focus:border-primary-500 
-                      outline-none transition"
+                      focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 
+                      hover:border-gray-400 dark:hover:border-gray-700
+                      outline-none transition-all duration-200"
                     placeholder="your@email.com"
                     required
                   />
-                </motion.div>
+                </div>
               </div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="mb-4"
-              >
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
-                  Message *
+
+              <div className="relative mb-6">
+                <label className="block text-sm font-medium 
+                  text-gray-700 dark:text-gray-300 
+                  mb-2 transition-colors duration-300">
+                  Message <span className="text-primary-500">*</span>
                 </label>
                 <textarea
                   name="message"
@@ -260,20 +307,23 @@ const Contact = () => {
                     text-gray-900 dark:text-white 
                     placeholder-gray-400 dark:placeholder-gray-600 
                     rounded-lg 
-                    focus:ring-2 focus:ring-primary-500 focus:border-primary-500 
-                    outline-none transition resize-none"
+                    focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 
+                    hover:border-gray-400 dark:hover:border-gray-700
+                    outline-none transition-all duration-200 resize-none"
                   placeholder="Tell me about your project..."
                   required
                 />
-              </motion.div>
+              </div>
+
               <motion.button
                 type="submit"
                 disabled={isSending}
                 whileHover={{ scale: isSending ? 1 : 1.02 }}
                 whileTap={{ scale: isSending ? 1 : 0.98 }}
-                className={`inline-flex items-center px-8 py-3 
+                className={`relative inline-flex items-center justify-center 
+                  px-8 py-3 
                   bg-primary-600 dark:bg-primary-500 
-                  text-white rounded-lg font-medium 
+                  text-white rounded-lg font-medium text-sm
                   transition-all duration-300 
                   shadow-lg shadow-primary-500/25 
                   hover:shadow-xl hover:shadow-primary-500/40 
@@ -281,7 +331,7 @@ const Contact = () => {
               >
                 {isSending ? (
                   <>
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg className="animate-spin -ml-1 mr-3 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
@@ -290,7 +340,7 @@ const Contact = () => {
                 ) : (
                   <>
                     Send Message
-                    <FaPaperPlane className="w-4 h-4 ml-2" />
+                    <FaPaperPlane className="w-3.5 h-3.5 ml-2 group-hover:translate-x-0.5 transition-transform" />
                   </>
                 )}
               </motion.button>
